@@ -1,0 +1,43 @@
+raw_data = [
+    # --- TECH: BACKEND & PYTHON ---
+    {"text": "  ", "source": "FastAPI Docs"},
+    {"text": "Python is the best language for backend engineering.", "source": "Opinion"},
+    {"text": "REST APIs use HTTP methods like GET and POST.", "source": "Web Standards"},
+    {"text": "Pydantic is a library used by FastAPI for data validation and settings management.", "source": "FastAPI Docs"},
+    {"text": "Dependency Injection in FastAPI helps manage database connections and authentication users.", "source": "Backend Best Practices"},
+    {"text": "Asynchronous programming (async/await) allows Python code to handle many requests at once without blocking.", "source": "Python Advanced"},
+    {"text": "Pytest is a popular framework for writing and running tests in Python applications.", "source": "Testing Guide"},
+
+    # --- TECH: DATABASES ---
+    {"text": "MongoDB stores data in flexible, JSON-like documents.", "source": "Database Manual"},
+    {"text": "SQL databases like PostgreSQL use rigid tables and rows to store structured data.", "source": "Database Comparison"},
+    {"text": "Redis is an in-memory data store often used as a cache to speed up applications.", "source": "System Design"},
+    {"text": "Vector databases like Pinecone or ChromaDB are designed to store and search high-dimensional embeddings.", "source": "AI Infrastructure"},
+    {"text": "BSON is the binary serialization format used by MongoDB to store documents.", "source": "Database Manual"},
+
+    # --- TECH: AI & ML ---
+    {"text": "Transformers utilize the Attention Mechanism for NLP.", "source": "AI Research"},
+    {"text": "Retrieval-Augmented Generation (RAG) enhances LLMs by fetching external context.", "source": "GenAI Intro"},
+    {"text": "Deep Learning uses neural networks with many layers.", "source": "ML Theory"},
+    {"text": "Hugging Face is a platform that hosts thousands of pre-trained models for NLP and computer vision.", "source": "AI Community"},
+    {"text": "Embeddings convert text into lists of numbers (vectors) that capture semantic meaning.", "source": "ML Basics"},
+    {"text": "Cosine Similarity is a metric used to measure how similar two vectors are to each other.", "source": "Math for ML"},
+    {"text": "Fine-tuning involves training a pre-existing model on a new    dataset to specialize it.", "source": "ML Strategy"},
+
+    # --- TECH: DEVOPS ---
+    {"text": "Docker containers ensure consistency across environments.", "source": "DevOps Handbook"},
+    {"text": "Kubernetes is an orchestration system for automating deployment, scaling, and management of containerized applications.", "source": "Cloud Native"},
+    {"text": "CI/CD pipelines automate the steps of building, testing, and deploying code changes.", "source": "DevOps Practices"},
+
+    # --- PERSONAL / UNCLE ---
+    {"text": "My uncle is mentoring me to success in life.", "source": "Personal"},
+    {"text": "Nanda Mohan Shenoy is my contact and a key mentor for my startup ideas.", "source": "Personal"},
+    {"text": "My CTO uncle is personally guiding me on this project for one week.", "source": "Personal"},
+    {"text": "My family has a legacy of founding banks like Canara Bank and Syndicate Bank.", "source": "Personal History"},
+
+    # --- ANIME (Demon Slayer) ---
+    {"text": "Demon Slayer is a popular anime about swordsmen.", "source": "Anime"},
+    {"text": "Tanjiro Kamado joins the Demon Slayer Corps to find a cure for his sister Nezuko.", "source": "Anime Plot"},
+    {"text": "The Hashira are the nine most powerful swordsmen in the Demon Slayer Corps.", "source": "Anime Lore"},
+    {"text": "Muzan Kibutsuji is the original demon and the main antagonist of the series.", "source": "Anime Villain"},
+]

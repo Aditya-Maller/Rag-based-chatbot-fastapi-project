@@ -3,12 +3,12 @@ from huggingface_hub import InferenceClient
 from core.db.mongo_db import mongo_instance 
 from app.rag.adapter.input.api.v1.request import IngestRequest 
 from core.llm.generation import gemini_generator
+from core.config import config
 
 rag_router = APIRouter()
 
-
-HF_TOKEN="hf_xxxYourHuggingFaceTokenxxx"
-MODEL_ID="sentence-transformers/all-MiniLM-L6-v2"
+HF_TOKEN=config.HF_TOKEN
+MODEL_ID=config.MODEL_ID
 SIMILARITY_THRESHOLD=0.5
 
 client=InferenceClient(token=HF_TOKEN)

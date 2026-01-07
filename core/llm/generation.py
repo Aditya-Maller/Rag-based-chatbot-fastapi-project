@@ -1,9 +1,10 @@
 import google.generativeai as genai
+from core.config import config
 
 class GeminiGenerator:
     def __init__(self):
         #hardcoded key
-        self.key="AI_xxxYourGeminiAPIKeyxxx"
+        self.key=config.GOOGLE_API_KEY
         genai.configure(api_key=self.key)
         self.model=genai.GenerativeModel('gemini-2.5-flash')
     

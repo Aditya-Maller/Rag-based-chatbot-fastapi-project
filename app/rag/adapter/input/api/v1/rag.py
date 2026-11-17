@@ -1,17 +1,16 @@
 from fastapi import APIRouter, HTTPException
-from huggingface_hub import InferenceClient
 from core.db.mongo_db import mongo_instance 
 from app.rag.adapter.input.api.v1.request import IngestRequest 
 from core.llm.generation import gemini_generator
 from core.config import config
+from sentence_transformers import SentenceTransformer
 
 rag_router = APIRouter()
 
-HF_TOKEN=config.HF_TOKEN
 MODEL_ID=config.MODEL_ID
 SIMILARITY_THRESHOLD=0.5
 
-client=InferenceClient(token=HF_TOKEN)
+client=SentenceTransformer(MODEL_ID)
 
 @rag_router.post("/ingest")
 async def ingest_document(request: IngestRequest):
@@ -19,9 +18,8 @@ async def ingest_document(request: IngestRequest):
         raise HTTPException(status_code=500, detail="Database down")
 
     try:
-        #get embedding
-        resp=client.feature_extraction(request.text, model=MODEL_ID)
-        vector=resp.tolist() if hasattr(resp, "tolist") else resp
+        #get embedding (local model, 384-dim; encode returns a numpy array)
+        vector=client.encode(request.text).tolist()
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -44,8 +42,7 @@ async def search_documents(query: str):
         raise HTTPException(status_code=500, detail="Database down")
 
     try:
-        resp = client.feature_extraction(query, model=MODEL_ID)
-        query_vector = resp.tolist() if hasattr(resp, "tolist") else resp
+        query_vector = client.encode(query).tolist()
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Vector fail: {str(e)}")
 

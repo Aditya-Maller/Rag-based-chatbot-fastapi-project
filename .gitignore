@@ -170,3 +170,6 @@ db/
 # Ignore OS System Files
 .DS_Store
 Thumbs.db
+
+# Project Status Doc
+project status.md

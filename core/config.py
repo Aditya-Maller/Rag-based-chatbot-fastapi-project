@@ -23,7 +23,6 @@ class Config(BaseSettings):
     REDIS_PORT: int = 6379
 
     # RAG Specific Settings
-    HF_TOKEN: str = os.getenv("HF_TOKEN", "")
     GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY", "")
     MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017")
     MODEL_ID: str = "sentence-transformers/all-MiniLM-L6-v2"

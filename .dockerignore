@@ -1,0 +1,53 @@
+# Version control & metadata
+.git
+.gitignore
+.gitattributes
+.pre-commit-config.yaml
+
+# Python cache / build / packaging junk
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments — never ship the host's venv
+.venv/
+venv/
+env/
+ENV/
+
+# Caches & test artifacts
+.cache/
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+htmlcov/
+tests/
+
+# Secrets & local env — runtime config comes from compose, not the image
+.env
+.env.*
+
+# Local databases & data dumps
+mongodb_data/
+mongo_data/
+data/
+db/
+*.rdb
+
+# Docs & project-specific notes
+project status.md
+README.md
+docker/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Hugging Face cache if ever placed inside the project
+.hf_cache/
+hf_cache/

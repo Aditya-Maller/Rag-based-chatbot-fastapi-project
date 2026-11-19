@@ -4,7 +4,9 @@ import sys
 import os
 
 #hardcoded url to skip config issues
-BACKEND_URL = "http://localhost:8000/api/v1/rag"
+#read BACKEND_URL from environment (compose sets http://backend:8000/api/v1/rag);
+#falls back to localhost for direct local runs
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000/api/v1/rag")
 GITHUB_LINK = "https://github.com"
 
 # 🎨 Page Setup
